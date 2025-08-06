@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef1f5;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #222;
+    }
+
+    #userList {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .user-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .user-card img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .user-card strong {
+      font-size: 1.2rem;
+    }
+
+    .user-card p {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>User List</h2>
+  <div id="userList">Loading...</div>
+
+  <script>
+    // Firebase setup and rendering logic as before...
+  </script>
+</body>
+</html>
