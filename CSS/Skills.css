@@ -22,21 +22,15 @@ section.skills-section {
 
 .skills-menu-container {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   /* border: 1px solid red; */
-  gap: 0.5rem;
   color: var(--text-color);
   border-bottom: 0.1rem solid var(--primary-color);
   /* border: 1px solid; */
-  padding: 1rem 0rem;
-  width: 100%;
-  align-items: center;
-}
-
-.skills-menu-container label {
-  /* margin: auto; */
-  /* border: 1px solid; */
-  width: max-content;
+  height: 2rem;
+  width: fit-content;
+  align-items: start;
+  
 }
 
 .skills-menu-container input {
