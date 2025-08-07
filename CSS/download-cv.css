@@ -5,6 +5,7 @@
         margin: auto;
         width: calc(7.5rem + 1vh);
         max-width: calc(8rem + 1vh);
+        aspect-ratio: 3/4;
         height: 90%;
         /* transform: rotate(-70deg); */
         z-index: 1;
