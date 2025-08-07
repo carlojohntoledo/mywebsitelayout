@@ -1,9 +1,9 @@
 section.About {
     display: grid;
     /* border: 1px solid; */
-    height: auto;
-    align-items: center;
-    padding-bottom: 1rem;
+    height: max-content;
+    align-items: start;
+    /* padding-bottom: 1rem; */
     width: 100%;
 }
 
@@ -19,7 +19,7 @@ section.About {
     gap: 0.5rem;
     overflow: hidden;
     /* border: 1px solid; */
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 
 .bio-container .vertical-line {
@@ -45,6 +45,7 @@ section.About {
     width: 100%;
     display: block;
     position: relative;
+    margin: auto;
 }
 
 #row-one-container a {
@@ -53,7 +54,7 @@ section.About {
     text-align: left;
     padding: 10px 10px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     position: relative;
     margin: 10px;
     width: 90%;
@@ -69,7 +70,7 @@ section.About {
     background-color: var(--accent-color);
     color: var(--text-color);
     transform: translateY(5px);
-    width: 91.5%;
+    /* width: 91.5%; */
 }
 
 #row-one-container p {

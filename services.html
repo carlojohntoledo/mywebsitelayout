@@ -220,46 +220,63 @@
                 </div>
             </section>
             <section class="service-section white-bordered scroll-fade">
-                <div class="service-container">
-                    <div class="service-card">
-                        <div class="service-content">
-                            <div class="service-image-container">
-                                <h1 class="srv">SERVICES</h1>
-                                <div class="service-logo-container">
-                                    <h1 class="service-logo-panel">KOALO</h1>
+                <div class="service-container-parent">
+                    <div class="service-container">
+                        <div class="service-card">
+                            <div class="service-content">
+                                <div class="service-image-container">
+                                    <h1 class="srv">SERVICES</h1>
+                                    <div class="service-logo-container">
+                                        <h1 class="service-logo-panel">KOALO</h1>
+                                    </div>
+                                    <img src="Assets\Images\unityhd.jpg" alt="service image" class="service-image"
+                                        id="service-image">
                                 </div>
-                                <img src="Assets\Images\unityhd.jpg" alt="service image" class="service-image"
-                                    id="service-image">
-                            </div>
-                            <div class="service-title-container">
-                                <h1 id="service-title">SERVICE TITLE</h1>
-                                <p id="experience">Experience: 1 year</p>
-                            </div>
-                            <div class="service-desc-container">
-                                <p id="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Quia nostrum aliquid hic
-                                    ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad quo
-                                    fugiat nulla tempora, similique nisi. Deserunt, recusandae.Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Quia nostrum aliquid hic
-                                    ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad quo
-                                    fugiat nulla tempora, similique nisi. Deserunt, recusandae.Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Quia nostrum aliquid hic
-                                    ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad quo
-                                    fugiat nulla tempora, similique nisi. Deserunt, recusandae.Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Quia nostrum aliquid hic
-                                    ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad quo
-                                    fugiat nulla tempora, similique nisi. Deserunt, recusandae.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nostrum aliquid hic
-                                    ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad quo
-                                    fugiat nulla tempora, similique nisi. Deserunt, recusandae.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nostrum aliquid hic
-                                    ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad quo
-                                    fugiat nulla tempora, similique nisi. Deserunt, recusandae.
-                                </p>
+                                <div class="service-title-container">
+                                    <h1 id="service-title">SERVICE TITLE</h1>
+                                    <p id="experience">Experience: 1 year</p>
+                                </div>
+                                <div class="service-desc-container">
+                                    <p class="desc-text" id="service-description">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                        Quia nostrum aliquid hic
+                                        ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad
+                                        quo
+                                        fugiat nulla tempora, similique nisi. Deserunt, recusandae.Lorem ipsum dolor sit
+                                        amet consectetur adipisicing elit. Quia nostrum aliquid hic
+                                        ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad
+                                        quo
+                                        fugiat nulla tempora, similique nisi. Deserunt, recusandae.Lorem ipsum dolor sit
+                                        amet consectetur adipisicing elit. Quia nostrum aliquid hic
+                                        ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad
+                                        quo
+                                        fugiat nulla tempora, similique nisi. Deserunt, recusandae.Lorem ipsum dolor sit
+                                        amet consectetur adipisicing elit. Quia nostrum aliquid hic
+                                        ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad
+                                        quo
+                                        fugiat nulla tempora, similique nisi. Deserunt, recusandae.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nostrum aliquid
+                                        hic
+                                        ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad
+                                        quo
+                                        fugiat nulla tempora, similique nisi. Deserunt, recusandae.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nostrum aliquid
+                                        hic
+                                        ipsam corporis possimus illo voluptatibus delectus cupiditate quidem iusto ad
+                                        quo
+                                        fugiat nulla tempora, similique nisi. Deserunt, recusandae.
+                                    </p>
+                                    <button class="toggle-desc">See More</button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
+                    <div class="end-indicator">
+                        Nothing more to show.
+                    </div>
                 </div>
+
             </section>
             <section class="contacts-section white-bordered scroll-fade">
                 <div class="download-cv-section red-bordered">
@@ -313,6 +330,17 @@
         });
     </script>
 
+    <script>
+        document.querySelectorAll('.service-desc-container').forEach(container => {
+            const toggleBtn = container.querySelector('.toggle-desc');
+            const text = container.querySelector('.desc-text');
+
+            toggleBtn.addEventListener('click', () => {
+                text.classList.toggle('expanded');
+                toggleBtn.textContent = text.classList.contains('expanded') ? 'See Less' : 'See More';
+            });
+        });
+    </script>
 
 </body>
 

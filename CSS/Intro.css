@@ -1,53 +1,16 @@
-h1
-{
-    color: var(--text-color);
-    font-weight: bold;
-}
-a
-{
-    text-decoration: none;
-}
 
-body    /* The whole webpage class */
-{
-    margin: 0px;
-    background-color: #18191A;
-    height: auto;
-}
-
-.label-bar     /* Navigation bar class */
-{
-    height: 10%;
-    background-color: #242526;
-    display: flex;
-    border-bottom: 1px solid #3A3B3C;
-    overflow: hidden;
-    z-index: 5; /* Set a higher z-index to keep it above other elements */
-}
-
-.label-bar-logo 
-{
-    position: relative;
-    height: 8vmin;
-    left: 10px;
-    top: 1vmin;
-}
-
-.label-bar-logo img 
-{
-    width: 6vmin;
-    align-self: center;
-}
-
+/* ---------- INTRO CSS ---------- */
 section.intro 
 {
-    height: 38vw;
+    height: max-content;
     margin: auto;
     overflow: hidden;
     background: linear-gradient(to bottom, var(--accent-color) -15%, transparent 30%, #262624, #242526);
     display: grid;
     /* border: 1px solid; */
     width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid var(--primary-color);
 }
 
 .intro-container
@@ -57,7 +20,6 @@ section.intro
     max-width: 100%;
     width: 70%;
     margin: auto;
-    margin-top: 0px;
     position: relative;
 }
 
@@ -137,6 +99,7 @@ section.intro
 {
     margin: auto;
     font-size: var(--font-xxl);
+    color: var(--text-color);
 }
 
 .name-text-container p

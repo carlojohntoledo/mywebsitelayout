@@ -1,10 +1,25 @@
 .service-section
 {
     display: grid;
+    align-items: start;
+    justify-content: start;
     /* border: 1px solid; */
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
     overflow-y: auto;
     grid-area: main-section;
+    
+}
+
+.service-container-parent
+{
+    display: grid;
+    gap: 0.5rem;
+    width: 100%;
+    height: max-content;
+    /* border: 1px solid yellow; */
+    align-items: start;
+    justify-content: start;
 }
 
 .service-container {
@@ -17,9 +32,8 @@
     overflow: hidden;
     grid-template-rows: 60% 10% 30%;
     grid-template-columns: 1fr;
-    margin: auto;
-    margin-top: 1rem;
     padding-bottom: 1rem;
+    margin: 0 auto;
 }
 
 .service-content {
@@ -104,10 +118,10 @@
 {   
     /* border: 1px solid; */
     position: absolute;
-    top: 0;
+    transform: translateY(-50%);
     right: 1rem;
     color: var(--primatry-color);
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
     margin-left: 10rem;
     z-index: 4;
     text-shadow: 0 0 10px rgb(255, 255, 255);
@@ -170,7 +184,59 @@
 
 .service-desc-container {
     margin: 1rem;
-    font-size: var(--font-sm);
+    font-size: var(--font-xs);
     color: var(--text-color-sub);
-    /* border: 1px solid; */
+    position: relative;
+}
+
+.desc-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-height 0.3s ease;
+    max-height: 6em; /* fallback for browsers not supporting line-clamp */
+}
+
+.desc-text.expanded {
+    -webkit-line-clamp: unset;
+    max-height: none;
+}
+
+.toggle-desc {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    padding: 0;
+    text-align: left;
+    user-select: none;
+}
+
+.toggle-desc:hover {
+
+    color: var(--text-color);
+
+}
+
+.end-indicator {
+    width: 100%;
+    color: var(--secondary-color);
+    font-size: var(--font-sm);
+    font-weight: bold;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    text-align: center;
+    cursor: default;
+}
+
+@media only screen and (max-width: 768px) {
+    .service-container {
+        width: 100%;
+        border-radius: 0;
+    }
+
 }

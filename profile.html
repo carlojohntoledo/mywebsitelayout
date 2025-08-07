@@ -237,26 +237,31 @@
                     </div>
 
                     <div class="skills-menu-container">
-                        <label>
-                            <input type="radio" name="skills-category" value="development" checked>
-                            <span>Development</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="skills-category" value="multimedia">
-                            <span>Multimedia</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="skills-category" value="sysadmin">
-                            <span>SysAdmin</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="skills-category" value="other">
-                            <span>Other</span>
-                        </label>
+                        <div class="skills-menu">
+                            <label>
+                                <input type="radio" name="skills-category" value="development" checked>
+                                <span>Development</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="skills-category" value="multimedia">
+                                <span>Multimedia</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="skills-category" value="sysadmin">
+                                <span>SysAdmin</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="skills-category" value="other">
+                                <span>Other</span>
+                            </label>
+                        </div>
                     </div>
 
-                    <div class="skills-content-container scroll-fade" id="skills-content">
-                        <!-- Skill cards will go here -->
+                    <div class="skills-content-container scroll-fade">
+                        <div class="skills-card-container" id="skills-content">
+                            <!-- Skill cards will go here -->
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -324,9 +329,7 @@
                 { name: 'Audacity', img: 'img/audacity.png' }
             ],
             sysadmin: [
-                { name: 'Linux', img: 'img/linux.png' },
-                { name: 'Bash', img: 'img/bash.png' },
-                { name: 'Server Management', img: 'img/server.png' }
+                { name: 'Linux', img: 'img/linux.png' }
             ],
             other: [
                 { name: 'Project Management', img: 'img/project.png' },
