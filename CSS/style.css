@@ -1,4 +1,8 @@
 /* ---------- MAIN STYLE CSS ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
 
     /* ===== PRIMARY COLORS ===== */
@@ -7,7 +11,7 @@
     --tertiary-color: #252728;
     --background-color: #1C1C1D;
     --small-logo-color: rgba(24, 24, 24, 0.263);
-    --accent-color: #d7c624;
+    --accent-color: #ffe602;
     --bubble-color: #f1e573;
     --text-color: white;
     --text-color-sub: #b0b3b8;
@@ -29,6 +33,18 @@
     /* 32px */
     --font-xxxl: 3rem;
     /* 48px */
+}
+
+/* Light Theme */
+.light-theme {
+    --primary-color: #D6D9DD;
+    --secondary-color: #e6e6e6;
+    --tertiary-color: #ffffff;
+    --background-color: #F2F4F7;
+    --small-logo-color: rgba(200, 200, 200, 0.3);
+    --bubble-color: #ffe602;
+    --text-color: #111;
+    --text-color-sub: #65686C;
 }
 
 /* Shared scrollbar that fades in on hover */
@@ -70,17 +86,17 @@
     overflow-y: auto;
 }
 
-html {
-    scroll-padding-top: 10rem;
-    scroll-behavior: smooth;
-    -webkit-tap-highlight-color: transparent;
-}
 
 body {
     background-color: var(--background-color);
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: antiquewhite;
+    font-family: "Roboto", monospace;
+    font-optical-sizing: auto;
+    color: var(--text-color);
+    font-style: normal;
+    scroll-padding-top: 10rem;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
     /* background-color: #252728; */
 }
 
@@ -146,9 +162,9 @@ body {
 @media (max-width: 768px) {
 
     .content-parent {
-    grid-template-rows: 0 7dvh 93dvh;
+        grid-template-rows: 0 7dvh 93dvh;
 
-}
+    }
 
     .shortcuts-section,
     .contacts-section,

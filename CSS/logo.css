@@ -11,13 +11,12 @@
 /* button styling */
 .logo {
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
-  --animation-color: #d7c624;
-  --fs-size: 2em;
+  --text-stroke-color: var(--text-color);
+  --animation-color: var(--accent-color);
+  --fs-size: var(--font-xl);
   letter-spacing: 3px;
   text-decoration: none;
   font-size: var(--font-xl);
-  font-family: "Arial";
   position: relative;
   text-transform: uppercase;
   color: transparent;

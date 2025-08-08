@@ -222,7 +222,7 @@
                         <div class="project-card">
                             <div class="project-content">
                                 <div class="project-image-container">
-                                    <h1 class="srv">PROJECTS</h1>
+                                    <h1 class="srv" id="theme-toggle">PROJECTS</h1>
                                     <div class="project-logo-container">
                                         <h1 class="project-logo-panel">KOALO</h1>
                                     </div>
@@ -230,11 +230,22 @@
                                         id="project-image">
                                 </div>
                                 <div class="project-title-container">
-                                    <h1 id="project-title"><strong>PROJECT TITLE</strong> <br>Carlo John Toledo</h1>
-                                    <p id="project-date">01/01/2025 <br> <strong>Project Published</strong></p>
+                                    <h1 id="project-title">PROJECT TITLE</h1>
+                                    <div class="project-details-container">
+                                        <div class="project-name-container">
+                                            <img class="xs-profilepic"
+                                                src="Assets\Images\Profile Pictures\default-profile-picture.jpg"
+                                                alt="profile picture">
+                                            <p>Carlo John Toledo</p>
+                                        </div>
+                                        <div class="project-status-container">
+                                            <p id="project-date">01/01/2025</p>
+                                            <p id="project-status">Published</p>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="project-links-container">
+                                <div class="project-links-container scroll-fade">
                                     <div class="project-tag-container">
                                         <div>csharp</div>
                                         <div>javascript</div>
@@ -346,6 +357,28 @@
                 text.classList.toggle('expanded');
                 toggleBtn.textContent = text.classList.contains('expanded') ? 'See Less' : 'See More';
             });
+        });
+    </script>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Load saved theme from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+        }
+
+        // Toggle theme and save choice
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+
+            if (body.classList.contains('light-theme')) {
+                localStorage.setItem('theme', 'light-theme');
+            } else {
+                localStorage.setItem('theme', '');
+            }
         });
     </script>
 
